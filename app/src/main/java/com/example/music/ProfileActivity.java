@@ -17,8 +17,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class ProfileActivity extends AppCompatActivity {
-    TextView profileName, profileEmail, profileUsername, profilePassword;
-    TextView titleName, titleUsername;
+    TextView profileName, profileEmail, profileUsername, profilePassword,titleName;
     Button editProfile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,6 @@ public class ProfileActivity extends AppCompatActivity {
         profileUsername = findViewById(R.id.profileUsername);
         profilePassword = findViewById(R.id.profilePassword);
         titleName = findViewById(R.id.titleName);
-        titleUsername = findViewById(R.id.titleUsername);
         editProfile = findViewById(R.id.editButton);
         showAllUserData();
         editProfile.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +44,6 @@ public class ProfileActivity extends AppCompatActivity {
         String usernameUser = intent.getStringExtra("username");
         String passwordUser = intent.getStringExtra("password");
         titleName.setText(nameUser);
-        titleUsername.setText(usernameUser);
         profileName.setText(nameUser);
         profileEmail.setText(emailUser);
         profileUsername.setText(usernameUser);
